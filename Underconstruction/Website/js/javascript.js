@@ -1,73 +1,64 @@
-//typing text
-// get the element
-const text = document.querySelector('.typing-text');
+window.onload = function() {
+  // get the element
+  const text = document.querySelector(".typing-text");
 
-// make a words array
-const words = [
-  "a Software Engineer",
-  "a Creator",
-  "a Rock Climber",
-  "a Dog Dad"
-];
+  // make a words array
+  const words = ["eat.", "sleep.", "code.", "repeat."];
 
-// start typing effect
-setTyper(text, words);
+  // start typing effect
+  setTyper(text, words);
 
-function setTyper(element, words) {
+  function setTyper(element, words) {
+    const LETTER_TYPE_DELAY = 75;
+    const WORD_STAY_DELAY = 2000;
 
-  const LETTER_TYPE_DELAY = 75;
-  const WORD_STAY_DELAY = 2000;
+    const DIRECTION_FORWARDS = 0;
+    const DIRECTION_BACKWARDS = 1;
 
-  const DIRECTION_FORWARDS = 0;
-  const DIRECTION_BACKWARDS = 1;
+    var direction = DIRECTION_FORWARDS;
+    var wordIndex = 0;
+    var letterIndex = 0;
 
-  var direction = DIRECTION_FORWARDS;
-  var wordIndex = 0;
-  var letterIndex = 0;
+    var wordTypeInterval;
 
-  var wordTypeInterval;
+    startTyping();
 
-  startTyping();
-
-  function startTyping() {
-    wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
-  }
-
-  function typeLetter() {
-    const word = words[wordIndex];
-
-    if (direction == DIRECTION_FORWARDS) {
-      letterIndex++;
-
-      if (letterIndex == word.length) {
-        direction = DIRECTION_BACKWARDS;
-        clearInterval(wordTypeInterval);
-        setTimeout(startTyping, WORD_STAY_DELAY);
-      }
-
-    } else if (direction == DIRECTION_BACKWARDS) {
-      letterIndex--;
-
-      if (letterIndex == 0) {
-        nextWord();
-      }
+    function startTyping() {
+      wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
     }
 
-    const textToType = word.substring(0, letterIndex);
+    function typeLetter() {
+      const word = words[wordIndex];
 
-    element.textContent = textToType;
-  }
+      if (direction == DIRECTION_FORWARDS) {
+        letterIndex++;
 
-  function nextWord() {
+        if (letterIndex == word.length) {
+          direction = DIRECTION_BACKWARDS;
+          clearInterval(wordTypeInterval);
+          setTimeout(startTyping, WORD_STAY_DELAY);
+        }
+      } else if (direction == DIRECTION_BACKWARDS) {
+        letterIndex--;
 
-    letterIndex = 0;
-    direction = DIRECTION_FORWARDS;
-    wordIndex++;
+        if (letterIndex == 0) {
+          nextWord();
+        }
+      }
 
-    if (wordIndex == words.length) {
-      wordIndex = 0;
+      const textToType = word.substring(0, letterIndex);
+
+      element.textContent = textToType;
     }
 
+    function nextWord() {
+      letterIndex = 0;
+      direction = DIRECTION_FORWARDS;
+      wordIndex++;
+
+      if (wordIndex == words.length) {
+        wordIndex = 0;
+      }
+    }
   }
 }
-

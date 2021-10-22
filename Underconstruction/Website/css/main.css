@@ -76,6 +76,10 @@ h3 {
           transform: scaleX(1);
 }
 
+.nav-container-mobile {
+  display: none;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,7 +249,7 @@ section {
   -ms-grid-column-span: 8;
   grid-column: 9/17;
   background-color: #A239CA;
-  width: 800px;
+  width: 45vw;
   height: 600px;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -321,6 +325,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   padding: 5em;
+  padding-right: 1em;
   z-index: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -367,7 +372,7 @@ section {
   -webkit-transform: skewY(10deg);
           transform: skewY(10deg);
   min-height: 700px;
-  padding: 0;
+  padding: 1px;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,22 +535,62 @@ section {
   }
 }
 
-@media only screen and (max-width: 740px) {
-  header {
-    display: none;
-  }
+@media only screen and (max-width: 750px) {
   h1 {
     font-size: 60px;
+  }
+  .nav-container {
+    display: none;
+  }
+  .nav-container-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0;
   }
   .container {
     padding: 0;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    text-align: center;
   }
   .container .name {
     padding: 1em;
+  }
+  .square-svg {
+    display: none;
+  }
+  .container-s {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 60px;
+  }
+  .container-s .sub-title-l {
+    font-size: 60px;
+  }
+  .container-s .sub-title-s {
+    font-size: 60px;
+  }
+  .container-s .sub-container-l {
+    -ms-grid-columns: 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px;
+    grid-gap: 20px;
+  }
+  .container-s .sub-container-s {
+    -ms-grid-columns: 110px 110px 110px;
+        grid-template-columns: 110px 110px 110px;
+    grid-gap: 20px;
+  }
+  #skillbox {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=main.css.map */

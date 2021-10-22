@@ -7,7 +7,7 @@ html {
 
 body{
     height: 100%;
-
+    
     margin:0;
     padding: 0;
     background: #0E0B16;
@@ -79,7 +79,10 @@ h3{
         
       }
     
-    
+}   
+
+.nav-container-mobile{
+    display:none;
 }
 
 header {
@@ -120,7 +123,7 @@ section{
     
     padding:4em 2em;
     box-sizing: border-box;
-
+   
 }
 
 .sectitle{
@@ -150,6 +153,7 @@ section{
 
 
 }
+
 
 /*Individual Sections code*/
 
@@ -243,7 +247,7 @@ section{
 .image-container{
     grid-column:9/17;
     background-color:#A239CA;
-    width: 800px;
+    width: 45vw;
     height: 600px;
     -webkit-transition: -webkit-transform 0.2s;
     transition: -webkit-transform 0.2s;
@@ -298,6 +302,7 @@ section{
     grid-row: 1;
     display: flex;
     padding:5em; 
+    padding-right: 1em;
     z-index: 1;
     flex-direction: column;
 
@@ -343,7 +348,7 @@ section{
 .container-s{
     transform: skewY(10deg);
     min-height:700px;
-    padding:0;
+    padding:1px;
     height:auto;
     display: flex;
     flex-direction: row;
@@ -458,24 +463,76 @@ section{
   }
 
 
-@media only screen and (max-width: 740px) {
-        header{
-            display: none;
-        }
+
+
+
+@media only screen and (max-width: 750px) {
+       
 
         h1{
             font-size: 60px;
         }
+
+       
+        .nav-container {
+          display:none;    
+            
+        }
+
+        .nav-container-mobile{
+            display: flex;
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index:999;
+            padding: 0;
+        }
         
+
         .container{
             padding: 0;
             align-self: center;
-            text-align: center;
+            
             .name{
                 padding: 1em;
             }
         }
 
+        .square-svg{
+            display: none;
+        }
+        
 
 
+        .container-s{
+            flex-direction: column;
+            gap:60px;
+
+            .sub-title-l{
+                font-size: 60px;  
+            }
+        
+            .sub-title-s{
+                font-size: 60px;
+                
+            }
+        
+            .sub-container-l{
+                grid-template-columns: 100px 100px 100px;
+                grid-gap: 20px;
+            }
+            
+            .sub-container-s{
+                grid-template-columns: 110px 110px 110px;
+                grid-gap: 20px;
+            }
+        }
+
+        #skillbox {
+            
+            font-size: 16px;
+            
+          }
 }
