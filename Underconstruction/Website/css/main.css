@@ -122,7 +122,7 @@ i {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: #b84975;
+  background: #A239CA;
   border: 15px solid #290c3a;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -597,21 +597,15 @@ section {
   }
   .nav-container {
     display: none;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
   }
   .nav-container-mobile {
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #333;
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 100;
-    padding: 0;
   }
   .menu {
     display: -webkit-box;
