@@ -3,7 +3,7 @@ window.onload = function() {
   const text = document.querySelector(".typing-text");
 
   // make a words array
-  const words = ["eat.", "sleep.", "code.", "repeat."];
+  const words = ["a Software Engineer", "a Front-End Developer", "a Rock Climber", "a Dog Dad"];
 
   // start typing effect
   setTyper(text, words);

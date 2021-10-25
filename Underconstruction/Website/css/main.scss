@@ -9,6 +9,7 @@ html {
   }
 
 body{
+    
     height: 100%;
     
     margin:0;
@@ -38,13 +39,23 @@ h1{
     font-weight: 500;
     font-size:100px;
     color:white;
-    
+    margin-bottom: 10px;
 }
 h3{
     font-style: normal;
     font-weight: 600;
     color: #fff;
     
+    
+}
+
+h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size:60px;
+    color: #A239CA;
+    margin-top:10px;
+    margin-bottom: 10px;
 }
 
 .nav-container {
@@ -93,7 +104,7 @@ h3{
     color: #000;
     justify-content: space-between;
     padding: 10px;
-    z-index: 999;
+    
 }
 i {
     font-size: 22px;
@@ -106,20 +117,20 @@ i {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 999;
+ 
 }
 .active {
     transform: translateY(-50px);
     color: #fff;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background:#A239CA ;
-    border: 15px solid #290c3a;
+    border: 10px solid #290c3a;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    
 }
       
 
@@ -133,7 +144,6 @@ header {
     justify-content: flex-end;
     padding:1em;
     
-
     ul{
         display:flex;
         gap:2em;
@@ -141,14 +151,8 @@ header {
 
         a {
             display: block;
-            
-                
-            
         }
 
-        
-        
-        
     }
     
 }
@@ -164,7 +168,7 @@ section{
     
     padding:4em 2em;
     box-sizing: border-box;
-   
+    
 }
 
 .sectitle{
@@ -286,6 +290,7 @@ section{
 
 }
 .image-container{
+    box-shadow: 0 3px 10px #000;
     grid-column:9/17;
     background-color:#A239CA;
     width: 45vw;
@@ -296,6 +301,7 @@ section{
     transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
 }
 .image-container-l{
+    box-shadow: 0 3px 10px #000;
     grid-column:2/9;
     background-color:#A239CA;
     width: 800px;
@@ -473,45 +479,95 @@ section{
     }
 }
 
+/*start of footer*/
 
-
-
-.footnote{
+footer {
     
-    bottom: 0;
-}
-.footer {
-   
-    height: 0;
-    bottom: 0;
-    width: auto;
-    background-color:white;
+    bottom: 0 !important;
+    padding:4em 2em;
+    
+    background-color:#A239CA;
     color: white;
     z-index: 2;
   }
 
-  .typing-text::after {
+.foot-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    h3{
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 60px;
+        order: 1;
+
+    }
+
+    .foot-links{
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color:#fff ;
+        
+        gap: 40px;
+    }
+    .foot-icon{
+    
+        i{
+            font-size: 52px;
+        }
+    }
+    
+    .foot-icon:hover{
+        color:#A239CA;
+    }
+}
+
+
+
+
+
+
+
+.typing-text::after {
     content: "|";
     animation: blink ease 1s infinite;
-  }
-  
-  @keyframes blink {
+}
+
+@keyframes blink {
     0%, 100% {
-      opacity: 0;
+        opacity: 0;
     } 50% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 
 
 
-
+/*iphone 11 pro max (sizing)*/
 @media only screen and (max-width: 750px) {
        
 
         h1{
             font-size: 60px;
+        }
+
+        h4{
+           
+            font-size:30px;
+            margin-top:10px;
+            margin-bottom: 30px;
+        }
+
+        .name{
+            flex-direction: center;
         }
 
        
@@ -550,6 +606,58 @@ section{
         .sectitle{
             font-size: 60px;
         }
+        /*beginning of about*/
+        .about{
+           height: auto; 
+
+           min-height: 0;
+           padding:0;
+           position: relative;
+           
+            
+            
+        }
+        .about::before {
+            transform: skewY(-5deg);
+            content: url('/images/tri-small.png');
+            
+            position: absolute;
+            top: 0;
+            left:0;
+            z-index: -1;
+            
+        }
+        
+        
+        .container-a{
+        
+            flex-direction: center;
+            padding-left: 0;
+            margin-top: 0;
+            
+            .sectitle{
+                padding:30px;
+                
+                h2{
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                
+            }
+        
+            .about-desc{
+                flex-direction: center;
+                font-size:20px ;
+                padding: 30px;
+                padding-bottom: 60px;
+                padding-top: 5px;
+                margin-top: 0;
+                
+            }
+        }
+
+
+
 
         /*beginning of project*/
         
@@ -584,8 +692,9 @@ section{
             flex-direction: center;
             width: 100%;
             height: 400px;
-            
-            
+            -webkit-transition: none;
+            transition: none;
+           
         }
         .image-container-l:hover,.image-container:hover {
             display: none;
