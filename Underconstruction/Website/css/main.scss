@@ -220,7 +220,7 @@ section{
     min-height: 1080px;
     padding:0;
     position: relative;
-    height: 60%;
+    height: 10%;
     width: 100%;
     background:#A239CA;
     transform: skewY(5deg);
@@ -230,7 +230,7 @@ section{
 }
 .about::before {
     transform: skewY(-5deg);
-    content: url('/images/Group 5.png');
+    content: url('images/Group 5.png');
     position: absolute;
     top: 0;
     left:0;
@@ -247,23 +247,44 @@ section{
     flex-direction: column;
     padding-left: 12rem;
     
+    
     .sectitle{
         order: 1;
         color: #fff;
+        h2{
+            margin-bottom: 60px;
+    
+        }
     }
-
-    .about-desc{
+    .about-desc-photo{
+        order: 2;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        gap:140px;
         
-        order:2;
-        color: #fff;
-        font-style: normal;
-        font-weight: 400;
-        font-size:45px ;
-        width: auto;
-        height: auto;
+        
+        .about-desc{
+        
+            order:1;
+            color: #fff;
+            font-style: normal;
+            font-weight: 400;
+            font-size:31px;
+            line-height: 1.4;
+        }
+        .about-photo{
+            border-width: 30px;
+            border-style: none;
+            border-color: #000;
+            align-self: center;
+            order: 2;
+            padding: 40px;
+            padding-right: 160px;
+            height: 400px;
+            width: 400px;
+        }
     }
+    
 }
 /*END OF ABOUT SECTION*/
 
@@ -401,7 +422,9 @@ section{
 
     }
     .project-code{
-       
+        order:3;
+        width:20%;
+        height:20%;
     }
 
 }
@@ -721,7 +744,7 @@ footer {
         }
         .about::before {
             transform: skewY(-5deg);
-            content: url('/images/tri-small.png');
+            content: url('images/tri-small.png');
             
             position: absolute;
             top: 0;
