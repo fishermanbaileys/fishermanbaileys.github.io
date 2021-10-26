@@ -96,6 +96,8 @@ h4{
 }   
 
 
+
+
 .menu {
     display: none;
     width: 100%;
@@ -196,6 +198,18 @@ section{
         order:2;
     }
 
+    .scroll{
+        order:3;
+        width: 5%;
+        
+    }
+    .scrolldown{
+        order:3;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 200px;
+    }
+
 
 }
 
@@ -256,12 +270,20 @@ section{
 
 
 /*Start OF projects SECTION*/
-
+.todo{
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+}
 .projects{
  
     height: auto;
     width: auto;
     background-color: #ffffff;
+    
+    
+    
+    
     transform: skewY(5deg);
 
     .sectitle{
@@ -282,7 +304,16 @@ section{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     
-    
+
+    .foot-links{
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color:#fff ;
+        gap: 40px;
+    }
+   
 }
     
 .image-container, .project-item-text,.image-container-l,.project-item-text-l{
@@ -290,9 +321,11 @@ section{
 
 }
 .image-container{
+    position: relative;
     box-shadow: 0 3px 10px #000;
     grid-column:9/17;
     background-color:#A239CA;
+    
     width: 45vw;
     height: 600px;
     -webkit-transition: -webkit-transform 0.2s;
@@ -340,7 +373,9 @@ section{
         padding: 10px;
     }
     .project-code{
-       
+       order:3;
+       width:20%;
+       height:20%;
     }
 
 }
@@ -484,50 +519,115 @@ section{
 footer {
     
     bottom: 0 !important;
-    padding:4em 2em;
-    
+    padding:2em 1em;
     background-color:#A239CA;
     color: white;
     z-index: 2;
   }
 
+
 .foot-container{
-    
-    display: flex;
-    flex-direction: column;
+    padding-top: 120px;
+    display:flex;
+    flex-direction: row;
     justify-content: center;
-    
+    gap:200px;
 
-    h3{
-
+    .foot-container-r{
+        order:1;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        text-align: center;
-        font-size: 60px;
-        order: 1;
-
-    }
-
-    .foot-links{
-        order: 2;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        color:#fff ;
+        z-index: 3;
         
-        gap: 40px;
+        h6{
+            font-size: 40px;
+            background: rgb(0,0,0);
+            background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 12%, rgba(41,12,58,1) 28%, rgba(162,57,202,1) 68%);
+            background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 12%, rgba(41,12,58,1) 28%, rgba(162,57,202,1) 68%);
+            background: linear-gradient(90deg, rgba(0,0,0,1) 12%, rgba(41,12,58,1) 28%, rgba(162,57,202,1) 68%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#a239ca",GradientType=1);
+            border-radius: 25px;
+            padding:6px;
+            margin:0;
+        }
+        
+        h3{
+            font-size: 32px;
+            position: relative;
+            
+            
+        }
+        
+        h3:hover {
+            color: #000;
+          }
+          
+        h3::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transform: scaleX(.27);
+            transform-origin: top left;
+            transition: transform 0.3s ease;
+        }
+          
+        h3:hover::before {
+            transform: scaleX(1);
+        }
+
+
     }
-    .foot-icon{
     
-        i{
-            font-size: 52px;
+    
+    .foot-container-l{
+        order:2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 35px;
+    
+        h3{
+            margin-top:0;
+            font-size: 32px;
+            order: 1;
+    
+        }
+    
+        .foot-links{
+            order: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color:#fff ;
+            gap: 40px;
+        }
+        .foot-icon{
+        
+            a{
+                font-size: 52px;
+                color: #000;
+            }
+    
+            a:hover{
+                color:#fff;
+            }
         }
     }
-    
-    .foot-icon:hover{
-        color:#A239CA;
-    }
+
 }
+
+.subnote{
+    padding-top: 15px;
+    text-align: center;
+}
+
+
 
 
 
@@ -606,6 +706,8 @@ footer {
         .sectitle{
             font-size: 60px;
         }
+
+       
         /*beginning of about*/
         .about{
            height: auto; 
@@ -789,5 +891,5 @@ footer {
             
             font-size: 16px;
             
-          }
+     }     
 }
