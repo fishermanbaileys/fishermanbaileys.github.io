@@ -246,7 +246,7 @@ section {
 .about::before {
   -webkit-transform: skewY(-5deg);
           transform: skewY(-5deg);
-  content: url("/images/Group 5.png");
+  content: url("images/Group 5.png");
   position: absolute;
   top: 0;
   left: 0;
