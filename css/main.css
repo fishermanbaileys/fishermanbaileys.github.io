@@ -330,7 +330,7 @@ section {
 /*END OF ABOUT SECTION*/
 /*Start OF projects SECTION*/
 .todo {
-  width: 97.8%;
+  width: 96.8%;
 }
 
 .my-memory {
@@ -500,7 +500,8 @@ section {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #a239ca), to(#e500ff));
+  background: linear-gradient(90deg, #a239ca 0, #e500ff 100%);
   -webkit-transform: scaleX(0.5);
           transform: scaleX(0.5);
   -webkit-transform-origin: top left;
@@ -517,11 +518,26 @@ section {
 }
 
 .project-item-text-r .project-code {
+  padding: 14px;
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  width: 20%;
-  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+  width: 4%;
+  height: 4%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.project-item-text-r .project-code a {
+  font-weight: 600;
 }
 
 .project-item-text-l {
@@ -578,7 +594,8 @@ section {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #e500ff), to(#a239ca));
+  background: linear-gradient(90deg, #e500ff 0, #a239ca 100%);
   -webkit-transform: scaleX(0.5);
           transform: scaleX(0.5);
   -webkit-transform-origin: top left;
@@ -595,11 +612,31 @@ section {
 }
 
 .project-item-text-l .project-code {
+  padding: 14px;
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  width: 20%;
-  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+  width: 16%;
+  height: 16%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.project-item-text-l .project-code a {
+  font-weight: 600;
+}
+
+.project-item-text-l .project-code .kotlin {
+  width: 26%;
+  height: 26%;
 }
 
 /*END OF Projects SECTION*/
@@ -923,6 +960,40 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1366px) {
+  .container-a {
+    padding: 20px;
+  }
+  .container-a .sectitle h2 {
+    margin-bottom: 60px;
+  }
+  .container-a .about-desc-photo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .container-a .about-desc-photo .about-desc {
+    line-height: 1.4;
+  }
+  .container-a .about-desc-photo .about-photo {
+    border-width: 30px;
+    border-style: none;
+    border-color: #000;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 40px;
+    padding-right: none;
+    height: 300px;
+    width: 300px;
+  }
+}
+
 @media only screen and (max-width: 1080px) {
   .container-s {
     -webkit-transform: skewY(10deg);
@@ -941,6 +1012,71 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 30px;
+  }
+  /*beginning of about*/
+  .about {
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    position: relative;
+  }
+  .about::before {
+    -webkit-transform: skewY(-5deg);
+            transform: skewY(-5deg);
+    content: url("/images/tri-small.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .container-a {
+    padding: 20px;
+  }
+  .container-a .sectitle h2 {
+    margin-bottom: 60px;
+  }
+  .container-a .about-desc-photo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .container-a .about-desc-photo .about-desc {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .container-a .about-desc-photo .about-photo {
+    border-width: 30px;
+    border-style: none;
+    border-color: #000;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 40px;
+    padding-right: none;
+    height: 300px;
+    width: 300px;
+  }
+  .project-item-text-r .project-title-text {
+    font-size: 42px;
+  }
+  .project-item-text-r .project-link-text a {
+    font-size: 20px;
+    color: black;
+    position: relative;
+  }
+  .project-item-text-r .project-link-text a:hover {
+    color: #000;
+  }
+  .project-item-text-l .project-title-text {
+    font-size: 42px;
+  }
+  .project-item-text-l .project-link-text a {
+    font-size: 20px;
   }
   .foot-container {
     padding-top: 80px;
