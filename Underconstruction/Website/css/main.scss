@@ -40,6 +40,7 @@ h1{
     font-size:100px;
     color:white;
     margin-bottom: 10px;
+
 }
 h3{
     font-style: normal;
@@ -54,6 +55,12 @@ h4{
     font-weight: 400;
     font-size:60px;
     color: #A239CA;
+    background-image: linear-gradient(90deg, rgb(229, 0, 255) 0%, rgb(130, 0, 255) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
     margin-top:10px;
     margin-bottom: 10px;
 }
@@ -72,7 +79,7 @@ h4{
 
     }
     a:hover {
-        color: #fff;
+        color: #A239CA;
         
       }
       
@@ -222,7 +229,7 @@ section{
     position: relative;
     height: 10%;
     width: 100%;
-    background:#A239CA;
+    background:linear-gradient(90deg,rgb(162, 57, 202) 0, rgb(229, 0, 255) 100%, );
     transform: skewY(5deg);
     
     
@@ -230,7 +237,7 @@ section{
 }
 .about::before {
     transform: skewY(-5deg);
-    content: url('images/Group 5.png');
+    content: url('/images/Group 5.png');
     position: absolute;
     top: 0;
     left:0;
@@ -242,11 +249,11 @@ section{
 .container-a{
 
     transform: skewY(-5deg);
-    height:auto;
+    
     display: flex;
     flex-direction: column;
     padding-left: 12rem;
-    
+    padding-bottom: 10em;
     
     .sectitle{
         order: 1;
@@ -453,12 +460,12 @@ section{
 .container-s{
     transform: skewY(10deg);
     min-height:700px;
-    padding:1px;
+    padding:4px;
     height:auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:300px;
+    gap:15.625vw;
 
     
 
@@ -484,15 +491,15 @@ section{
     .sub-container-l{
         
         display: grid;
-        grid-template-columns: 200px 200px 200px;
-        grid-gap: 40px;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-gap: 2.083vw;
     }
     
     .sub-container-s{
         
         display: grid;
-        grid-template-columns: 200px 200px 200px;
-        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2.083vw;
     }
     
 }
@@ -504,10 +511,11 @@ section{
     border-radius: 40px;
     padding: 10px;
     text-align: center;
-    font-size: 32px;
+    font-size: 1.667vw;
     font-weight: 700;
-    
+    align-items:center ;
     transition-duration: 0.4s;
+
   }
 
 
@@ -515,7 +523,10 @@ section{
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   perspective: 1000px;
-  background-color: #A239CA;
+  background: rgb(162,57,202);
+  background: -moz-linear-gradient(86deg, rgba(162,57,202,1) 17%, rgba(184,38,219,1) 50%, rgba(229,0,255,1) 83%);
+  background: -webkit-linear-gradient(86deg, rgba(162,57,202,1) 17%, rgba(184,38,219,1) 50%, rgba(229,0,255,1) 83%);
+  background: linear-gradient(86deg, rgba(162,57,202,1) 17%, rgba(184,38,219,1) 50%, rgba(229,0,255,1) 83%);
   color: white;
 }
 
@@ -543,7 +554,11 @@ footer {
     
     bottom: 0 !important;
     padding:2em 1em;
-    background-color:#A239CA;
+    background: rgb(162,57,202);
+    background: -moz-linear-gradient(164deg, rgba(162,57,202,1) 41%, rgba(184,38,219,1) 63%, rgba(229,0,255,1) 83%);
+    background: -webkit-linear-gradient(164deg, rgba(162,57,202,1) 41%, rgba(184,38,219,1) 63%, rgba(229,0,255,1) 83%);
+    background: linear-gradient(164deg, rgba(162,57,202,1) 41%, rgba(184,38,219,1) 63%, rgba(229,0,255,1) 83%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a239ca",endColorstr="#e500ff",GradientType=1); 
     color: white;
     z-index: 2;
   }
@@ -671,9 +686,6 @@ footer {
     }
 }
 
-
-
-
 /*iphone 11 pro max (sizing)*/
 @media only screen and (max-width: 750px) {
        
@@ -684,7 +696,7 @@ footer {
 
         h4{
            
-            font-size:30px;
+            font-size:26px;
             margin-top:10px;
             margin-bottom: 30px;
         }
@@ -714,11 +726,11 @@ footer {
               
 
         .container{
-            padding: 0;
+            padding-bottom: 60px;
             align-self: center;
             
             .name{
-                padding: 1em;
+                padding: 2em;
             }
         }
 
@@ -731,7 +743,7 @@ footer {
         }
 
        
-        /*beginning of about*/
+    /*beginning of about*/
         .about{
            height: auto; 
 
@@ -744,7 +756,7 @@ footer {
         }
         .about::before {
             transform: skewY(-5deg);
-            content: url('images/tri-small.png');
+            content: url('/images/tri-small.png');
             
             position: absolute;
             top: 0;
@@ -755,46 +767,51 @@ footer {
         
         
         .container-a{
-        
-            flex-direction: center;
-            padding-left: 0;
-            margin-top: 0;
+
+            padding:20px;
+            
             
             .sectitle{
-                padding:30px;
-                
+    
                 h2{
-                    text-align: center;
-                    margin-bottom: 10px;
+                    margin-bottom: 60px;
                 }
-                
             }
-        
-            .about-desc{
-                flex-direction: center;
-                font-size:20px ;
-                padding: 30px;
-                padding-bottom: 60px;
-                padding-top: 5px;
-                margin-top: 0;
-                
+            .about-desc-photo{
+                flex-direction: column;
+                gap:20px;
+                    
+                .about-desc{
+    
+                    font-size:20px;
+                    line-height: 1.4;
+                }
+                .about-photo{
+                    border-width: 30px;
+                    border-style: none;
+                    border-color: #000;
+                    align-self: center;
+                    order: 2;
+                    padding: 40px;
+                    padding-right: none;
+                    height: 300px;
+                    width: 300px;
+                }
             }
+            
         }
 
 
 
 
-        /*beginning of project*/
+    /*beginning of project*/
         
         .projects{
             padding-left: 0;
             padding-right: 0;
-        
+            
             .sectitle{
-                
-                transform: skewY(-5deg);
-                text-align: center;
-                color:#0E0B16;
+                font-size: 56px;
             }
          
         }
@@ -873,7 +890,7 @@ footer {
         }
         
 
-        /*start of skills*/
+    /*start of skills*/
         .skills{
             
             .sectitle{
@@ -914,5 +931,54 @@ footer {
             
             font-size: 16px;
             
-     }     
+     } 
+     
+     /*start of footer*/
+    
+    
+    .foot-container{
+        padding-top: 50px;
+        flex-direction: column;
+        gap:50px;
+        align-items: center;
+        
+        .foot-container-r{
+            
+            h6{
+                font-size: 40px;
+                border-radius: 25px;
+                padding:2px;
+                margin:0;
+                text-align: center;
+                background: #000;
+            }
+            
+            h3{
+                font-size:20px;
+  
+            }
+   
+        }
+        
+        .foot-container-l{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        
+            h3{
+                display: none;
+        
+            }
+        }
+    
+    }
+    
+    .subnote{
+        font-size: 12px;
+        padding-top: 20px;
+        padding-bottom: 90px;
+        text-align: center;
+    }
 }
