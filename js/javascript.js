@@ -1,4 +1,35 @@
+
 window.onload = function() {
+
+
+gsap.registerPlugin(ScrollTrigger);
+var tl = gsap.timeline();
+
+tl.from('.container', {
+  y: '-30%',
+  opacity:0,
+  duration: 2,
+  ease: "power4.out"
+})
+
+
+tl.from('.stagger1', {
+  y: '-50',
+  opacity:0,
+  duration: 2,
+  stagger: .4,
+  ease: "power4.out",
+  duration: 2
+}, "-=1.5")
+
+
+
+
+
+
+
+
+
   // get the element
   const text = document.querySelector(".typing-text");
 

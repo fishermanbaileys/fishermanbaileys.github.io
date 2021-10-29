@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="icon" type="image/svg+xml" href="/images/Layer 1.svg">
 </head>
 
@@ -46,11 +48,11 @@
 </div>
   <div class="container">
     <div class="name">
-      <h1>BAILEY / GRAHAM</h1>
-      <h4 class="typing-text"></h4>
+      <h1 class="stagger1">BAILEY / GRAHAM</h1>
+      <h4 class="typing-text stagger1"></h4>
     </div>
 
-    <svg id="Layer_1" class="square-svg" data-name="Layer 1" width="548" height="516.078" viewBox="0 0 548 516.078">
+    <svg id="Layer_1" class="square-svg stagger1" data-name="Layer 1" width="548" height="516.078" viewBox="0 0 548 516.078">
       <path id="Path_62" data-name="Path 62" d="M457.493,293.91l-46.9,81.522H314l48.295-81.522Z" transform="translate(22.019 20.61)" fill="#582871" />
       <path id="Path_63" data-name="Path 63" d="M188.17,0l46.9,81.511h96.589L283.368,0Z" transform="translate(13.195)" fill="#8e4e9f" />
       <path id="Path_64" data-name="Path 64" d="M188.17,159.929h40.2l28.283-48.209h54.715l20.29-35.55H235.074Z" transform="translate(13.195 5.341)" fill="#582871" />
@@ -72,11 +74,22 @@
       <path id="Path_80" data-name="Path 80" d="M298.517,192.207,252.17,109.39l94.642,1.306,48.295,81.511Z" transform="translate(17.683 7.671)" fill="#8e4e9f" />
       <path id="Path_81" data-name="Path 81" d="M306.522,112.469l20.653-36.3L252.17,111.72Z" transform="translate(17.683 5.341)" fill="#582871" />
     </svg>
-    <!--<div class="scrolldown">
-      <img class="scroll" src="images/Group 4.svg">
-    </div>-->
+
   </div>
-  
+  <div class="sub-container stagger1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="scroll" width="87" height="147" viewBox="0 0 87 147">
+      <g id="scroll-down" transform="translate(882 -506.213)">
+        <g id="Path_83" data-name="Path 83" transform="translate(-882 506.213)" fill="#a239ca">
+          <path d="M 43.5 142 C 38.30034255981445 142 33.25884246826172 140.9827575683594 28.51559066772461 138.9765167236328 C 23.93163681030273 137.0376892089844 19.81377220153809 134.2610015869141 16.27638626098633 130.7236175537109 C 12.73900032043457 127.1862258911133 9.962318420410156 123.0683670043945 8.023477554321289 118.4844055175781 C 6.017250061035156 113.7411575317383 5 108.6996612548828 5 103.5 L 5 43.5 C 5 38.30034255981445 6.017250061035156 33.25884246826172 8.023477554321289 28.51559066772461 C 9.962318420410156 23.93163681030273 12.73900032043457 19.81377220153809 16.27638626098633 16.27638626098633 C 19.81377220153809 12.73900032043457 23.93163681030273 9.962318420410156 28.51559066772461 8.023477554321289 C 33.25884246826172 6.017250061035156 38.30034255981445 5 43.5 5 C 48.69965744018555 5 53.74115753173828 6.017250061035156 58.48440933227539 8.023477554321289 C 63.06836318969727 9.962318420410156 67.18622589111328 12.73900032043457 70.72360992431641 16.27638626098633 C 74.26100158691406 19.81377220153809 77.03768157958984 23.93163681030273 78.97652435302734 28.51559066772461 C 80.98274993896484 33.25884246826172 82 38.30034255981445 82 43.5 L 82 103.5 C 82 108.6996612548828 80.98274993896484 113.7411575317383 78.97652435302734 118.4844055175781 C 77.03768157958984 123.0683670043945 74.26100158691406 127.1862258911133 70.72360992431641 130.7236175537109 C 67.18622589111328 134.2610015869141 63.06836318969727 137.0376892089844 58.48440933227539 138.9765167236328 C 53.74115753173828 140.9827575683594 48.69965744018555 142 43.5 142 Z" stroke="none"/>
+          <path d="M 43.5 10 C 25.02803039550781 10 10 25.02803039550781 10 43.5 L 10 103.5 C 10 121.9719696044922 25.02803039550781 137 43.5 137 C 61.97196960449219 137 77 121.9719696044922 77 103.5 L 77 43.5 C 77 25.02803039550781 61.97196960449219 10 43.5 10 M 43.5 0 C 67.52438354492188 0 87 19.47561645507812 87 43.5 L 87 103.5 C 87 127.5243835449219 67.52438354492188 147 43.5 147 C 19.47561645507812 147 0 127.5243835449219 0 103.5 L 0 43.5 C 0 19.47561645507812 19.47561645507812 0 43.5 0 Z" stroke="none" fill="#0e0b16"/>
+        </g>
+        <g id="Ellipse_4" class="ellipse" data-name="Ellipse 4" transform="translate(-861 587.213)" fill="#0e0b16" stroke="#707070" stroke-width="1">
+          <ellipse cx="23" cy="22.5" rx="23" ry="22.5" stroke="none"/>
+          <ellipse cx="23" cy="22.5" rx="22.5" ry="22" fill="none"/>
+        </g>
+      </g>
+    </svg>
+  </div>
 
   </div>
 
@@ -102,6 +115,8 @@ I have worked on a wide variety of projects from apps, software, websites, and a
   </section>
 
   <!--End of About Section-->
+
+    <!--Start of Projects Section-->
   <section class="projects">
     <div class="sectitle" id="projects">
       <h2>Projects</h2>
@@ -239,7 +254,7 @@ I have worked on a wide variety of projects from apps, software, websites, and a
 
   </section>
 
-  <!--Start of Projects Section-->
+
 
   
 
@@ -256,15 +271,17 @@ I have worked on a wide variety of projects from apps, software, websites, and a
         <h3>Languages</h3>
         <div class="sub-container-l">
           <a id="skillbox">Java</a>
-          <a id="skillbox">Ruby</a>
-          <a id="skillbox">Javascript</a>
           <a id="skillbox">Python</a>
+          <a id="skillbox">Ruby</a>
+          <a id="skillbox">Kotlin</a>
+          <a id="skillbox">Javascript</a>
           <a id="skillbox">Rails</a>
+          <a id="skillbox">Sass</a>
+          <a id="skillbox">Less</a>
           <a id="skillbox">Vue.js</a>
           <a id="skillbox">PHP</a>
-          <a id="skillbox">Kotlin</a>
-          <a id="skillbox">SQL</a>
-
+          <a id="skillbox">React</a>
+        
         </div>
       </div>
 

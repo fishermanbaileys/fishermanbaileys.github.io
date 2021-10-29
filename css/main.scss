@@ -194,35 +194,33 @@ section{
     display: flex;
     flex-direction:row ;
     gap: 250px;
-    
+    padding: 50px;
+   
     .name{
-        padding-top: 100px;
+        
         padding-left: 171px;
         order:1;
     }
 
     .square-svg{
-        padding-bottom: 200px;
-        padding-top: 200px;
+        
         order:2;
     }
-
-    .scroll{
-        order:3;
-        width: 5%;
-        
-    }
-    .scrolldown{
-        order:3;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 200px;
-    }
+    
 
 
 }
 
+.sub-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
 
+    .scroll{
+        width: 80px;
+        height: 80px;
+    }
+}
 /*Individual Sections code*/
 
 .about{
@@ -1002,21 +1000,35 @@ footer {
               
 
         .container{
-            padding-bottom: 60px;
-            align-self: center;
+            
+            padding: 10px;
+            justify-content: center;
             
             .name{
                 padding: 2em;
             }
+
+            .square-svg{
+                display: none;
+            }
         }
 
-        .square-svg{
-            display: none;
+        .sub-container{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 30px;
+        
+            .scroll{
+                width: 40px;
+                height: 40px;
+            }
         }
 
         .sectitle{
             font-size: 60px;
         }
+
+
 
        
     /*beginning of about*/
@@ -1315,5 +1327,24 @@ footer {
         padding-top: 20px;
         padding-bottom: 90px;
         text-align: center;
+    }
+}
+
+
+
+
+
+.ellipse{
+    animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@keyframes circleAnim {
+    from{
+        transform: translate(-861px, 587.213px);
+        z-index: 5;
+    }
+    to{
+        transform: translate(-861px, 528px);
+        z-index: 5;
     }
 }

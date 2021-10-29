@@ -200,10 +200,10 @@ section {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 250px;
+  padding: 50px;
 }
 
 .container .name {
-  padding-top: 100px;
   padding-left: 171px;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -211,31 +211,24 @@ section {
 }
 
 .container .square-svg {
-  padding-bottom: 200px;
-  padding-top: 200px;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
-.container .scroll {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  width: 5%;
-}
-
-.container .scrolldown {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+.sub-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
+}
+
+.sub-container .scroll {
+  width: 80px;
+  height: 80px;
 }
 
 /*Individual Sections code*/
@@ -1138,16 +1131,29 @@ footer {
     display: flex;
   }
   .container {
-    padding-bottom: 60px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    padding: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .container .name {
     padding: 2em;
   }
-  .square-svg {
+  .container .square-svg {
     display: none;
+  }
+  .sub-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 30px;
+  }
+  .sub-container .scroll {
+    width: 40px;
+    height: 40px;
   }
   .sectitle {
     font-size: 60px;
@@ -1461,6 +1467,36 @@ footer {
     padding-top: 20px;
     padding-bottom: 90px;
     text-align: center;
+  }
+}
+
+.ellipse {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes circleAnim {
+  from {
+    -webkit-transform: translate(-861px, 587.213px);
+            transform: translate(-861px, 587.213px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(-861px, 528px);
+            transform: translate(-861px, 528px);
+    z-index: 5;
+  }
+}
+
+@keyframes circleAnim {
+  from {
+    -webkit-transform: translate(-861px, 587.213px);
+            transform: translate(-861px, 587.213px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(-861px, 528px);
+            transform: translate(-861px, 528px);
+    z-index: 5;
   }
 }
 /*# sourceMappingURL=main.css.map */
