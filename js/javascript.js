@@ -19,7 +19,6 @@ tl.from('.stagger1', {
   duration: 2,
   stagger: .4,
   ease: "power4.out",
-  duration: 2
 }, "-=1.5")
 
 
