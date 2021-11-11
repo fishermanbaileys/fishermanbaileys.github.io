@@ -1,9 +1,24 @@
 
+
+
+
+
 window.onload = function() {
 
+CSSPlugin.defaultForce3D = "auto";
 
 gsap.registerPlugin(ScrollTrigger);
 var tl = gsap.timeline();
+
+
+tl.from('.container',3, { 
+   autoAlpha:-5, 
+   y: '-=40%', 
+   ease: Power1.Out, 
+})
+
+
+/*
 
 tl.from('.container', {
   y: '-30%',
@@ -21,10 +36,7 @@ tl.from('.stagger1', {
   ease: Power4.Out,
 },"-=1.5")
 
-
-
-
-
+*/
 
 
 
