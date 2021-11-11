@@ -564,6 +564,7 @@ section{
         font-size: 60px;
         
         
+        
     }
 
     .sub-title-s{
@@ -922,6 +923,35 @@ footer {
     
     }
 
+    .skills{
+            
+        .sectitle{
+            
+            h2{
+                margin-bottom: 30px;
+            }
+            
+        }
+    
+    }
+    
+    .container-s{
+        
+
+        .sub-title-s{
+            padding-bottom: 120px;
+            
+        }
+    
+  
+    }
+
+    #skillbox {
+        
+        font-size: 24px;
+        
+ } 
+
 
     .foot-container{
         padding-top: 80px;
@@ -1112,6 +1142,8 @@ footer {
         
         .sectitle{ 
             font-size: 56px;
+            margin-left: -100%;
+            margin-right: -100%;
         }
      
     }
@@ -1147,7 +1179,7 @@ footer {
         background-color:#A239CA;
         display:flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         width:100vw;
         height: 400px;
         background-color:#A239CA;
@@ -1155,6 +1187,11 @@ footer {
         transition: -webkit-transform 0.2s;
         transition: transform 0.2s;
         transition: transform 0.2s, -webkit-transform 0.2s;
+
+        .todo{
+            width: 77%;
+        }
+
     }
     .image-container-l{
         
@@ -1162,8 +1199,7 @@ footer {
         box-shadow: 0 3px 10px #000;
         background-color:#A239CA;
         display:flex;
-        align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         width:100vw;
         height: 400px;
         background-color:#A239CA;
@@ -1172,7 +1208,16 @@ footer {
         transition: transform 0.2s;
         transition: transform 0.2s, -webkit-transform 0.2s;
         
-        
+        .my-memory{
+            width: 72%;
+            
+         
+        }
+
+        .mock{
+            width:90%;
+        }
+
     }
    
     .project-item-text-r{
@@ -1186,6 +1231,8 @@ footer {
         flex-direction:column;
         text-align:left;
         align-self: flex-start;
+
+   
         
 
         .project-title-text{
@@ -1200,8 +1247,9 @@ footer {
         }
         .project-code{
            order:3;
-           width:20%;
+           width: 2.2em;
            height:20%;
+           align-self: start;
         }
     
     }
@@ -1230,7 +1278,7 @@ footer {
         }
         .project-code{
             order:3;
-            width:20%;
+            width:8em;
             height:20%;
         }
     
@@ -1255,7 +1303,9 @@ footer {
             padding:0;
 
             .sub-title-l{
-                font-size: 50px;  
+
+                font-size: 50px;
+                 
             }
         
             .sub-title-s{

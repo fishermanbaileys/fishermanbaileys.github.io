@@ -1071,6 +1071,15 @@ footer {
   .project-item-text-l .project-link-text a {
     font-size: 20px;
   }
+  .skills .sectitle h2 {
+    margin-bottom: 30px;
+  }
+  .container-s .sub-title-s {
+    padding-bottom: 120px;
+  }
+  #skillbox {
+    font-size: 24px;
+  }
   .foot-container {
     padding-top: 80px;
     display: -webkit-box;
@@ -1223,6 +1232,8 @@ footer {
   }
   .projects .sectitle {
     font-size: 56px;
+    margin-left: -100%;
+    margin-right: -100%;
   }
   .project-item {
     -webkit-transform: skewY(-5deg);
@@ -1273,9 +1284,9 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100vw;
     height: 400px;
     background-color: #A239CA;
@@ -1283,6 +1294,9 @@ footer {
     transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
     transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+  .image-container-r .todo {
+    width: 77%;
   }
   .image-container-l {
     -webkit-box-ordinal-group: 2;
@@ -1294,12 +1308,9 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100vw;
     height: 400px;
     background-color: #A239CA;
@@ -1307,6 +1318,12 @@ footer {
     transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
     transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+  .image-container-l .my-memory {
+    width: 72%;
+  }
+  .image-container-l .mock {
+    width: 90%;
   }
   .project-item-text-r {
     padding-top: 10px;
@@ -1348,8 +1365,11 @@ footer {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    width: 20%;
+    width: 2.2em;
     height: 20%;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
   }
   .project-item-text-l {
     padding-top: 10px;
@@ -1390,7 +1410,7 @@ footer {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    width: 20%;
+    width: 8em;
     height: 20%;
   }
   /*start of skills*/

@@ -7,19 +7,19 @@ var tl = gsap.timeline();
 
 tl.from('.container', {
   y: '-30%',
-  opacity:0,
-  duration: 2,
-  ease: "power4.out"
+  autoAlpha: 0,
+  duration: 2.5,
+  ease: Power4.Out
 })
 
 
 tl.from('.stagger1', {
   y: '-50',
-  opacity:0,
-  duration: 2,
+  autoAlpha: 0,
+  duration: 2.5,
   stagger: .4,
-  ease: "power4.out",
-}, "-=1.5")
+  ease: Power4.Out,
+},"-=1.5")
 
 
 
