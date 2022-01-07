@@ -380,6 +380,22 @@ section {
   gap: 40px;
 }
 
+.codeicons {
+  width: 43px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chatlyback {
+  padding: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .image-container-r {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -685,6 +701,10 @@ section {
       -ms-flex-order: 1;
           order: 1;
   font-size: 60px;
+}
+
+.container-s .sub-title-l h3 {
+  text-align: center;
 }
 
 .container-s .sub-title-s {

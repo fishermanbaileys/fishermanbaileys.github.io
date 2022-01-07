@@ -344,6 +344,18 @@ section{
    
 }
 
+.codeicons{
+    width: 43px;
+    height: fit-content;
+    
+}
+    
+.chatlyback{
+    padding:20px;
+    align-self: center;
+    align-content: center;
+}
+
 .image-container-r{
     order:2;
     box-shadow: 0 3px 10px #000;
@@ -562,6 +574,10 @@ section{
         align-items: center;
         order: 1;
         font-size: 60px;
+
+        h3{
+            text-align: center;
+        }
         
         
         
@@ -1191,6 +1207,7 @@ footer {
         .todo{
             width: 77%;
         }
+        
 
     }
     .image-container-l{
@@ -1385,10 +1402,14 @@ footer {
 
 
 .ellipse{
+    
     animation: circleAnim 1s infinite alternate-reverse;
+    
 }
 
+
 @keyframes circleAnim {
+    
     from{
         transform: translate(-861px, 587.213px);
         z-index: 5;
