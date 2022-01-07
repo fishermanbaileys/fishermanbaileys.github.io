@@ -1433,6 +1433,12 @@ footer {
     width: 8em;
     height: 20%;
   }
+  .project-item-text-l .project-code .codeicons {
+    width: 43px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   /*start of skills*/
   .skills .sectitle h2 {
     margin-bottom: 40px;
