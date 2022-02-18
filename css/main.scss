@@ -346,7 +346,7 @@ section{
 
 .codeicons{
     width: 43px;
-    height: 32px;
+    height: fit-content;
     
 }
     
@@ -1299,11 +1299,12 @@ footer {
             height:20%;
 
 
-            .codeicons{
-                width: 43px;
-                height: fit-content;
-                
-            }
+        
+        }
+        .codeicons{
+            width: 43px;
+            height: fit-content;
+            
         }
     
     }

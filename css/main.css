@@ -382,7 +382,9 @@ section {
 
 .codeicons {
   width: 43px;
-  height: 32px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .chatlyback {
@@ -1431,7 +1433,7 @@ footer {
     width: 8em;
     height: 20%;
   }
-  .project-item-text-l .project-code .codeicons {
+  .project-item-text-l .codeicons {
     width: 43px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
