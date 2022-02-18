@@ -382,9 +382,7 @@ section {
 
 .codeicons {
   width: 43px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 32px;
 }
 
 .chatlyback {
@@ -1435,9 +1433,7 @@ footer {
   }
   .project-item-text-l .codeicons {
     width: 43px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 32px;
   }
   /*start of skills*/
   .skills .sectitle h2 {
